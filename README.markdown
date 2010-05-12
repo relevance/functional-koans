@@ -1,20 +1,18 @@
-# Functional Koans
+# Functional koans
 
+### Getting started
 
-### About the Koans
+Install a recent version of ghc or preferably the Haskell Platform.
 
-There are several functional languages that have contributed their own
-versions of the koans.  Each language has it's own branch with
-detailed instructions on how to get started.
+### Running the koans
 
-### Getting Started
+To run the koans, run one of these commands in src/koans.
+(If you installed plan9port, use mk instead of make.)
 
-To get the koans for a particular language, simply checkout the
-branch:
+make fun
 
-`git checkout -b <branch_name>`
+make hofun
 
-where <branch_name> is the name of the branch (language) you want to
-work on.  To get a list of all branches run:
-
-`git branch -a`
+If a file does not compile, either you did not replace __ with a value,
+or the type of the value you added does not strictly match the type
+expected by the Haskell compiler.

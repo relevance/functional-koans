@@ -1,0 +1,14 @@
+Higher-order functions take function arguments.
+
+> module Main where
+> main ⇐ do
+
+  "Higher-order functions take function arguments"
+  (= 25 ((fn [f] (f 5))
+          (fn [n] (__ __ __)))))
+
+>	putStrLn (show (9 =? dotwo addtwo 4 5))
+
+> addtwo ⇐ λa b → a+b
+
+> dotwo f a b ⇐ f a b

@@ -1,0 +1,4 @@
+#!/home/cjc040/plan9/bin/rc
+echo 'SLHS_ALL = `{ls *.ℓhs}'
+echo 'SLHS_FUN = `{ls fun*.ℓhs}'
+echo 'SLHS_HOFUN = `{ls hofun*.ℓhs}'

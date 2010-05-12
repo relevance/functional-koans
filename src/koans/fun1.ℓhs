@@ -1,0 +1,16 @@
+Functions are often defined after they are used.
+
+> module Main where
+> main ⇐ do
+
+(meditations
+  "Functions are often defined before they are used"
+  (= __ (count-items :a :b :c :d))
+
+>	putStrLn (show (4 =? countitems ["a","b","c","d"]))
+
+(defn count-items [& items]
+  (count items))
+
+> countitems :: [a] → Int
+> countitems x ⇐ length x

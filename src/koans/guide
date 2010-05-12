@@ -1,0 +1,10 @@
+make distclean
+make fun
+make hofun
+mk clean
+mk distclean
+mk fun
+mk hofun
+mk hofun6.koan
+|sed 's,^([ 	]+),\n ,'|fmt -w 72|par -w 72|sed '/^$/d'
+|sort|uniq

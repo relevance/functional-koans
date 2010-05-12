@@ -1,0 +1,14 @@
+Reducing can increase the result, and you can start somewhere else.
+
+> module Main where
+> main ⇐ do
+
+  "Reducing can increase the result"
+  (= __ (reduce (fn [a b] (* a b)) [1 2 3 4]))
+
+> 	putStrLn (show (24 =? foldr (λa b → a * b) 1 [1,2,3,4]))
+
+  "You can start somewhere else"
+  (= 2400 (reduce (fn [a b] (* a b)) __ [1 2 3 4]))
+
+> 	putStrLn (show (57600 =? foldr (λa b → a * b) 2400 [1,2,3,4]))

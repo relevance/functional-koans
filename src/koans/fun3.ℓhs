@@ -1,0 +1,14 @@
+Functions can beget others.
+
+> module Main where
+> main ⇐ do
+
+  "Functions can beget others"
+  (= __ (((fn []
+            (fn [a b] (+ a b))))
+          4 5))
+
+>	putStrLn (show (9 =? (λa b → a+b) 4 5))
+>	putStrLn (show (9 =? addtwo 4 5))
+
+> addtwo ⇐ λa b → a+b

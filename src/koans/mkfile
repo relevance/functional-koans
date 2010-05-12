@@ -1,0 +1,22 @@
+<|./ensorcel
+ELF = ${SLHS_ALL:%.ℓhs=%}
+
+%.lhs:: %.ℓhs
+	sed -f toascii.sed $stem.ℓhs > $stem.lhs
+
+%:: %.lhs
+	ghc -o $stem $stem.lhs
+
+%.koan:QV: %
+	head -1 $stem.ℓhs
+	./$stem
+
+clean:QV:
+	rm -f *.lhs *.hi *.o
+
+distclean:QV: clean
+	rm -f $ELF
+
+fun:V: ${SLHS_FUN:%.ℓhs=%.koan}
+
+hofun:V: ${SLHS_HOFUN:%.ℓhs=%.koan}

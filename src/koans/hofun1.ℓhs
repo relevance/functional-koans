@@ -1,0 +1,11 @@
+The map function relates a sequence to another.
+
+> module Main where
+> main ⇐ do
+
+(meditations
+  "The map function relates a sequence to another"
+  (= [__ __ __] (map (fn [x] (* 4 x)) [1 2 3]))
+
+> 	putStrLn (show ([4,8,12] =? map (λx → 4 * x) [1,2,3]))
+> 	putStrLn (show ([4,8,12] =? (λxs → [4 * x | x←xs]) [1,2,3]))

@@ -1,0 +1,22 @@
+A filter can be strong, or very weak, or somewhere in between.
+
+> module Main where
+> main ⇐ do
+
+  "A filter can be strong"
+  (= __ (filter (fn [x] false) '(:anything :goes :here)))
+
+> 	putStrLn (show ([] =? filter (λx → False) [1,2,3]))
+> 	putStrLn (show ([] =? (λxs → [x | x←xs, False]) [1,2,3]))
+> 	putStrLn (show ([] =? (λxs → [x | x←xs, x=?1, x=?2, x=?3]) [1,2,3]))
+
+  "Or very weak"
+  (= '(:anything :goes :here) (filter (fn [x] __) '(:anything :goes :here)))
+
+> 	putStrLn (show (["anything","goes","here"] =? (λxs → [x | x←xs, x=?"anything" ⋁ x=?"goes" ⋁ x=?"here"]) ["anything","goes","here"]))
+> 	putStrLn (show (["anything","goes","here"] =? (λxs → [x | x←xs, True]) ["anything","goes","here"]))
+
+  "Or somewhere in between"
+  (= [10 20 30] (filter (fn [x] __) [10 20 30 40 50 60 70 80]))
+
+> 	putStrLn (show ([1,3] =? filter odd [1,2,3]))
