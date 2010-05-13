@@ -1,12 +1,6 @@
-But they can also be defined inline, or using even shorter syntax.
+But they can also be defined inline, using lambda-production syntax.
 
 > module Main where
 > main ⇐ do
 
-  "But they can also be defined inline"
-  (= __ ((fn [n] (Math/pow n 10)) 2))
-
-  "Or using even shorter syntax"
-  (= __ (#(Math/pow % 10)))
-
->	putStrLn (show (1024 =? (λn → n^10) 2))
+>	putStrLn (show (__ =? (λn → n^10) 2))

@@ -3,9 +3,19 @@ The map function relates a sequence to another.
 > module Main where
 > main ⇐ do
 
-(meditations
-  "The map function relates a sequence to another"
-  (= [__ __ __] (map (fn [x] (* 4 x)) [1 2 3]))
+nb list comprehension map expression
+To construct the members of the output list, list comprehensions map the
+expression before the bar to each element of the list parameter
 
-> 	putStrLn (show ([4,8,12] =? map (λx → 4 * x) [1,2,3]))
-> 	putStrLn (show ([4,8,12] =? (λxs → [4 * x | x←xs]) [1,2,3]))
+> 	putStrLn (show ([4,8,12] =? map (λx → __ __ __) [1,2,3]))
+> 	putStrLn (show ([4,8,12] =? (λxs → [__ __ __ | x←xs]) [1,2,3]))
+
+nb list comprehension monad do notation guard
+We can also express the list comprehension with do notation (ordered
+list of expressions), since both are monads.¹
+ ¹ http://www.haskell.org/haskellwiki/List_comprehension
+
+> 	putStrLn (show ([4,8,12] =? listmonad [1,2,3]))
+
+> listmonad xs = do x←xs
+>                   return (__ __ __)

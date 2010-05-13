@@ -1,0 +1,8 @@
+cp /home/jdc/Dropbox/haskell/koans/* src/koans
+git add guide
+git commit -m'Initial haskell push with (higher-order) functions.'
+win git push git@github.com:relevance/functional-koans haskell
+git reset HEAD
+git status
+|fmt -w 72
+|sort|uniq

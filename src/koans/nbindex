@@ -1,3 +1,14 @@
+fun1.ℓhs:8 type signature generic polymorphic list return integer
+fun3.ℓhs:11 type signature lambda direct equivalent numeric typeclass
+fun4.ℓhs:11 type signature structure function parameter
 history:1 relevance functional koan source github
 history:5 old command guide
-hofun4.ℓhs:13 map filter preserve value list comprehension
+hofun1.lhs:6 list comprehension map expression
+hofun1.lhs:13 list comprehension monad do notation guard
+hofun1.ℓhs:6 list comprehension map expression
+hofun1.ℓhs:13 list comprehension monad do notation guard
+hofun2.lhs:27 style do notation list comprehension monad apply function point free
+hofun2.ℓhs:27 style do notation list comprehension monad apply function point free
+hofun4.lhs:10 map filter separate guard output value list comprehension
+hofun4.ℓhs:10 map filter separate guard output value list comprehension
+hofun4.ℓhs:27 point free tacit programming

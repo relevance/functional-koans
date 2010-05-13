@@ -3,16 +3,31 @@ Maps and filters may be combined.
 > module Main where
 > main ⇐ do
 
-  "Maps and filters may be combined"
-  (= [10 20 30] (map (fn [x] __) (filter (fn [x] __) [1 2 3 4 5 6 7 8])))
-
 ceiling floor truncate round :: (RealFrac a, Integral b) ⇒ a → b
 
-> 	putStrLn (show ([1,3,5,7] =? filter odd (map (λx → truncate (x/10)) [10,20,30,40,50,60,70,80])))
+> 	putStrLn (show ([__,__,__,__] =? filter __ (map (λx → truncate (x/10)) [10,20,30,40,50,60,70,80])))
 
-nb map filter preserve value list comprehension
+nb map filter separate guard output value list comprehension
 Return original list’s elements, for those elements whose transformed
-values match criteria.  Here, return elements of the list with odd
-numbers in the tens place, incremented by 1
+values match criteria.  Here, return elements of the list with the selected
+numbers in the tens place, incremented by 1.
 
-> 	putStrLn (show ([11,31,51,71] =? (λxs → [x + 1 | x←xs, odd (truncate (x/10))]) [10,20,30,40,50,60,70,80]))
+> 	putStrLn (show ([__,__,__,__] =? (λxs → [x + 1 | x←xs, __ (truncate (x/10))]) [10,20,30,40,50,60,70,80]))
+
+To do this without separately considering the guard condition and output
+transform means that we must reverse operations after we decide which
+elements to process.
+
+> 	putStrLn (show ([__,__,__,__] =? pointfree [10,20,30,40,50,60,70,80]))
+
+> div10 x = truncate (x / 10)
+
+> mul10plus1 x = x * 10 + 1
+
+nb point free tacit programming
+The points-free style works somewhat like a unix pipeline.  Here we omit
+the parameter, which is processed first by (map div10).  The output of
+this is processed by the filter, and then its output is processed by
+(map mul10plus).
+
+> pointfree = (map mul10plus1) . (filter __) . (map div10)

@@ -3,14 +3,11 @@ Functions are often defined after they are used.
 > module Main where
 > main ⇐ do
 
-(meditations
-  "Functions are often defined before they are used"
-  (= __ (count-items :a :b :c :d))
+>	putStrLn (show (__ =? countitems ["a","b","c","d"]))
 
->	putStrLn (show (4 =? countitems ["a","b","c","d"]))
-
-(defn count-items [& items]
-  (count items))
+nb type signature generic polymorphic list return integer
+This type signature asks the function to accept a list of any type,
+and return an integer.
 
 > countitems :: [a] → Int
 > countitems x ⇐ length x

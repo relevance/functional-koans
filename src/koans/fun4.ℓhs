@@ -3,12 +3,18 @@ Higher-order functions take function arguments.
 > module Main where
 > main ⇐ do
 
-  "Higher-order functions take function arguments"
-  (= 25 ((fn [f] (f 5))
-          (fn [n] (__ __ __)))))
+>	putStrLn (show (9 =? __ __ 4 5))
 
->	putStrLn (show (9 =? dotwo addtwo 4 5))
-
+> addtwo :: Num a ⇒ a → a → a
 > addtwo ⇐ λa b → a+b
 
+nb type signature structure function parameter
+(a → a → a) in the type signature corresponds to the function parameter
+f, and says that the type of this parameter is a punction which takes
+two parameters of the same type, and returns another value of that type.
+The next two a in the type signature correspond to parameters a and b,
+and the last a in the type signature corresponds to the return value of
+the function.
+
+> dotwo :: (a → a → a) → a → a → a
 > dotwo f a b ⇐ f a b

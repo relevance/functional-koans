@@ -3,12 +3,22 @@ Functions can beget others.
 > module Main where
 > main ⇐ do
 
-  "Functions can beget others"
-  (= __ (((fn []
-            (fn [a b] (+ a b))))
-          4 5))
+>	putStrLn (show (__ =? (+) 4 5))
+>	putStrLn (show (__ =? (λa b → a+b) 4 5))
+>	putStrLn (show (__ =? addtwolambda 4 5))
+>	putStrLn (show (__ =? addtwodirect 4 5))
 
->	putStrLn (show (9 =? (λa b → a+b) 4 5))
->	putStrLn (show (9 =? addtwo 4 5))
+nb type signature lambda direct equivalent numeric typeclass
+In this type signature, we say that addtwo is a function that returns a
+function that takes two numeric arguments (because they have to be
+addable).
 
-> addtwo ⇐ λa b → a+b
+> addtwolambda :: Num a ⇒ a → a → a
+> addtwolambda ⇐ λa b → a+b
+
+This is the same type signature as a function which adds the numbers
+directly, so the type system considers them the same, and one may be
+replaced by the other.
+
+> addtwodirect :: Num a ⇒ a → a → a
+> addtwodirect a b ⇐ a+b

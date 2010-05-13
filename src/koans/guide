@@ -6,5 +6,6 @@ mk distclean
 mk fun
 mk hofun
 mk hofun6.koan
+|fmt -w 72
 |sed 's,^([ 	]+),\n ,'|fmt -w 72|par -w 72|sed '/^$/d'
 |sort|uniq

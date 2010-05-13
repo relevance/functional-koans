@@ -2,11 +2,5 @@ Numbers are not the only things one can reduce.
 
 > module Main where
 > main ⇐ do
-
-  "Numbers are not the only things one can reduce"
-  (= "longest" (reduce (fn [a b]
-                         (if (< __ __) b a))
-                       ["which" "word" "is" "longest"])))
-
-> 	putStrLn (show ("longest" =? foldr (λa b → if (length a > length b) then a else b) "" ["which","word","is","longest"]))
-> 	putStrLn (show ("word" =? foldr (λa b → if (a > b) then a else b) "" ["which","word","is","last"]))
+> 	putStrLn (show (__ =? foldr (λa b → if (length a > length b) then a else b) "" ["which","word","is","longest"]))
+> 	putStrLn (show (__ =? foldr (λa b → if (a > b) then a else b) "" ["which","word","is","last"]))
