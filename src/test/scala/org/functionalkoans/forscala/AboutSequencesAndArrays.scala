@@ -29,4 +29,23 @@ class AboutSequencesAndArrays extends KoanSuite with ShouldMatchers {
     s.toList should be (List(3,6,9))
   }
 
+  koan ("You can filter any sequence based on a predicate") {
+    val s = Seq("hello", "to", "you")
+    val filtered = s.filter(_.length > 2)
+    filtered should be (Seq("hello", "you"))
+  }
+
+  koan ("You can also filter Arrays in the same way") {
+    val a = Array("hello", "to", "you", "again")
+    val filtered = a.filter(_.length > 3)
+    filtered should be (Array("hello", "again"))
+  }
+
+  koan ("You can map values in a sequence through a function") {
+    val s = Seq("hello", "world")
+    val r = s map {_.reverse}
+
+    r should be (Seq("olleh", "dlrow"))
+  }
+
 }
