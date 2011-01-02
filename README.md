@@ -1,5 +1,8 @@
 # Clojure Koans
 
+## NOTE: this is no longer the official repo for the Clojure Koans.
+## They are now hosted at [https://github.com/functional-koans/clojure-koans](https://github.com/functional-koans/clojure-koans)
+
 The Clojure Koans are a fun and easy way to get started with Clojure - no
 experience assumed or required.  Just follow the instructions below to start
 making tests pass!
