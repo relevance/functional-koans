@@ -87,7 +87,7 @@
                               :a :b :c :d
                               :c :d]
                         "___" ["multiply-by-5"]}
-   "factorial" {"__" ["(loop [n n acc 1]
+   "recursion" {"__" ["(loop [n n acc 1]
                          (if (zero? n)
                              acc
                              (recur (dec n) (* acc n))))"]}
