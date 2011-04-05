@@ -2,12 +2,12 @@
 
 ## OUT OF DATE
 
-Many of the branches here are out of date.  The clojure koans have moved on to functional-koans/clojure-koans and the scala koans have moved over to bitbucket.  Please feel free to browse here but I suggest you look to the other places for more current code.
+Many of the branches here are out of date. The clojure koans have moved on to functional-koans/clojure-koans, the F# koans have moved on to ChrisMarinos/FSharpKoans and the scala koans have moved over to bitbucket. Please feel free to browse here but I suggest you look to the other places for more current code.
 
 ### About the Koans
 
 There are several functional languages that have contributed their own
-versions of the koans.  Each language has it's own branch with
+versions of the koans. Each language has it's own branch with
 detailed instructions on how to get started.
 
 ### Getting Started
